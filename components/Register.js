@@ -61,7 +61,7 @@ export function Register() {
 const styles = StyleSheet.create({
   container: {
     width: "100vw",
-    marginHorizontal: 80,
+    paddingHorizontal: 80,
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
