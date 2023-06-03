@@ -113,7 +113,6 @@ export function Home() {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100vw",
     paddingHorizontal: 20,
     flex: 1,
     backgroundColor: "#fff",

@@ -38,7 +38,6 @@ export function TabBar({ state, descriptors, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100vw",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
