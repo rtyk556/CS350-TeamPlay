@@ -1,17 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { Button, Linking, StyleSheet, Text, TextInput, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { Button, Linking, StyleSheet, SwitchComponent, Text, TextInput, View } from 'react-native';
 import { useState } from "react";
 import { Register } from "./Register";
+import Home from "./Home";
 
-export default function Login(){
+
+export default function Login({ navigation }){
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
 
     const handleForgot=() => {
 
     }
-    const handleLogin=() => {
-        
+    const handleLogin=({ navigation }) => {
+        navigation.navigate('Home')
     }
 
     return(
@@ -26,9 +28,9 @@ export default function Login(){
             </View>
             <Button color={"#50a42f"} style={styles.button} onPress={handleForgot} title="Forgot Password?"></Button>
             <View style={{flexDirection: 'row'}}>
-                <Button color={"#50a42f"} style={styles.button} onPress={handleLogin} title="Login"></Button>
+                <Button color={"#50a42f"} style={styles.button} onPress={() => navigation.navigate('Home')} title="Login"></Button>
                 <View style={{width: "5%"}}></View>
-                <Button color={"#50a42f"} style={styles.button} onPress={Register} title="Register"></Button>
+                <Button color={"#50a42f"} style={styles.button} onPress={() => navigation.navigate('Register')} title="Register"></Button>
             </View>
         </View>
     )
