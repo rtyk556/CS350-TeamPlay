@@ -5,6 +5,7 @@ import Login from './components/Login';
 import { TabBar } from "./components/TabBar";
 import { Home } from "./components/Home";
 import { Matches } from "./components/Matches";
+import { Ranking } from "./components/Ranking";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Matches" component={Matches} />
-        <Tab.Screen name="Ranking" component={Register} />
+        <Tab.Screen name="Ranking" component={Ranking} />
         <Tab.Screen name="User" component={Register} />
       </Tab.Navigator>
     </NavigationContainer>
