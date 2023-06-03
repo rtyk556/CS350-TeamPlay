@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Register } from "./components/Register";
+import Login from './components/Login';
 import { TabBar } from "./components/TabBar";
 import { Home } from "./components/Home";
 
