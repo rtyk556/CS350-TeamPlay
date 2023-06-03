@@ -10,14 +10,10 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { MaterialIcons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-
-// TODO: add more sports
-const sportList = [{ label: "SOCCER", value: "soccer" }];
+import { SportPicker } from "./SportPicker";
 
 export function Home() {
-  const [sport, setSport] = useState(sportList[0]);
-  const [isSportPickerOpen, setSportPickerOpen] = useState(false);
-  const [sportItems, setSportItems] = useState(sportList);
+  const [sport, setSport] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(new Date());
@@ -35,7 +31,7 @@ export function Home() {
 
   const handleReserve = () => {
     // TODO: implement
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -43,17 +39,11 @@ export function Home() {
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Sports</Text>
         </View>
-        <View style={styles.sportPickerContainer}>
-          <DropDownPicker
-            open={isSportPickerOpen}
-            value={sport}
-            items={sportItems}
-            setOpen={setSportPickerOpen}
-            setValue={setSport}
-            setItems={setSportItems}
-            style={styles.sportPicker}
-          />
-        </View>
+        <SportPicker
+          sport={sport}
+          setSport={setSport}
+          style={styles.sportPicker}
+        />
       </View>
       <View style={styles.wrapper}>
         <View style={styles.titleContainer}>
@@ -138,6 +128,10 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
   },
+  sportPicker: {
+    width: 200,
+    alignSelf: "center",
+  },
   typeWrapper: {
     alignSelf: "center",
     display: "flex",
@@ -158,10 +152,6 @@ const styles = StyleSheet.create({
   },
   typeText: {
     color: "#fff",
-  },
-  sportPickerContainer: {
-    width: 200,
-    alignSelf: "center",
   },
   locationInput: {
     padding: 10,
