@@ -9,6 +9,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Home() {
   return (
+    <NavigationContainer>
       <Tab.Navigator
         screenOptions={{ headerShown: false }}
         initialRouteName='Home'
@@ -19,5 +20,6 @@ export default function Home() {
         <Tab.Screen name="Ranking" component={Register} />
         <Tab.Screen name="User" component={Register} />
       </Tab.Navigator>
+    </NavigationContainer>
   );
 }

@@ -7,7 +7,6 @@ import { TabBar } from "./components/TabBar";
 import Home from "./components/Home";
 
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 
 export default function App() {
   // TODO: if user is authenticated show tabs if not show login page
