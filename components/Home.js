@@ -39,7 +39,11 @@ export function Home() {
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Sports</Text>
         </View>
-        <SportPicker sport={sport} setSport={setSport} />
+        <SportPicker
+          sport={sport}
+          setSport={setSport}
+          style={styles.sportPicker}
+        />
       </View>
       <View style={styles.wrapper}>
         <View style={styles.titleContainer}>
@@ -124,6 +128,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "bold",
+  },
+  sportPicker: {
+    width: 200,
+    alignSelf: "center",
   },
   typeWrapper: {
     alignSelf: "center",
