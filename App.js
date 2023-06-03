@@ -2,6 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Register } from "./components/Register";
 import { TabBar } from "./components/TabBar";
+import { Home } from "./components/Home";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +17,7 @@ export default function App() {
         initialRouteName="Home"
         tabBar={(props) => <TabBar {...props} />}
       >
-        <Tab.Screen name="Home" component={Register} />
+        <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Matches" component={Register} />
         <Tab.Screen name="Ranking" component={Register} />
         <Tab.Screen name="User" component={Register} />
