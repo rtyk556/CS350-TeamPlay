@@ -15,6 +15,7 @@ import { SportPicker } from "./SportPicker";
 export function Match() {
   const [sport, setSport] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [showTimePicker, setShowTimePicker] = useState(false);
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(new Date());
   const [location, setLocation] = useState("");
@@ -75,7 +76,14 @@ export function Match() {
             <MaterialIcons name="calendar-today" size={20} color="#50a42f" />
           </TouchableOpacity>
         </View>
-        <DateTimePicker value={time} mode="time" onChange={handleTimeChange} />
+        {showTimePicker && (
+          <DateTimePicker
+            value={time}
+            mode="time"
+            onChange={handleTimeChange}
+            display="spinner"
+          />
+        )}
       </View>
       <DateTimePickerModal
         isVisible={showDatePicker}
