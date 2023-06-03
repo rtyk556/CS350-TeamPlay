@@ -33,6 +33,10 @@ export function Home() {
     setTime(selectedTime);
   };
 
+  const handleReserve = () => {
+    // TODO: implement
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>
@@ -100,6 +104,9 @@ export function Home() {
           placeholder="type in the location"
         />
       </View>
+      <TouchableOpacity style={styles.reserveButton} onPress={handleReserve}>
+        <Text style={styles.reserveText}>RESERVE</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -161,5 +168,17 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "#eee",
     borderRadius: 10,
+  },
+  reserveButton: {
+    alignSelf: "center",
+    borderRadius: 10,
+    padding: 10,
+    backgroundColor: "#fff",
+    borderWidth: 2,
+    borderColor: "#50a42f",
+  },
+  reserveText: {
+    color: "#50a42f",
+    fontSize: 20,
   },
 });
