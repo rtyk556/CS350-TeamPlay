@@ -2,7 +2,7 @@ import { useState } from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
 import { SportPicker } from "./SportPicker";
 
-export function Matches() {
+export function Records() {
   const [records, setRecords] = useState([
     {
       date: "",

@@ -12,7 +12,7 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { SportPicker } from "./SportPicker";
 
-export function Home() {
+export function Match() {
   const [sport, setSport] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [date, setDate] = useState(new Date());
