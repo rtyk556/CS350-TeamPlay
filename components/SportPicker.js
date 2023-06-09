@@ -3,7 +3,10 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { useEffect, useState } from "react";
 
 // TODO: add more sports
-export const sportList = [{ label: "SOCCER", value: "soccer" }];
+export const sportList = [
+  { label: "SOCCER", value: "soccer" },
+  { label: "BASKETBALL", value: "basketball" },
+];
 
 export function SportPicker({ sport, setSport, style }) {
   const [isSportPickerOpen, setSportPickerOpen] = useState(false);
